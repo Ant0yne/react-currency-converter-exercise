@@ -5,12 +5,20 @@ const Switch = ({
 	setCurrencyTop,
 	currencyBot,
 	setCurrencyBot,
+	valueTop,
+	setValueTop,
+	valueBot,
+	setValueBot,
 }) => {
 	const handleSwitch = () => {
 		const tempCTop = currencyTop;
 		const tempCBot = currencyBot;
 		setCurrencyTop(tempCBot);
 		setCurrencyBot(tempCTop);
+		const tempVTop = valueTop;
+		const tempVBot = valueBot;
+		setValueTop(tempVBot);
+		setValueBot(tempVTop);
 	};
 	return (
 		<>

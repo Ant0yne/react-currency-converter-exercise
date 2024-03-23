@@ -17,6 +17,7 @@ function App() {
 	const [valueTop, setValueTop] = useState(0);
 	const [valueBot, setValueBot] = useState(0);
 
+	// Create an object with all currencies rate
 	const currenciesRates = rates();
 
 	return (
