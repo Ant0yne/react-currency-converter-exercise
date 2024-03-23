@@ -39,7 +39,9 @@ const Input = ({
 					currencyBot={currencyBot}
 					setCurrencyBot={setCurrencyBot}
 					currenciesRates={currenciesRates}
+					valueTop={valueTop}
 					setValueTop={setValueTop}
+					valueBot={valueBot}
 					setValueBot={setValueBot}
 				/>
 			</div>
