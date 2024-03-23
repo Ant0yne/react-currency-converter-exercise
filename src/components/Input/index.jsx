@@ -13,6 +13,13 @@ const Input = ({
 	setValueBot,
 	currenciesRates,
 }) => {
+	/**
+	 *
+	 * @param {Object} e
+	 *
+	 * check the position of the input
+	 * calculate the new value for both input with the currency rate
+	 */
 	const handleChangeInput = (e) => {
 		if (position === "Top") {
 			setValueTop(e.target.value);

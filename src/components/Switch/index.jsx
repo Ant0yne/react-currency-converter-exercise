@@ -10,6 +10,10 @@ const Switch = ({
 	valueBot,
 	setValueBot,
 }) => {
+	/**
+	 * switch currencies
+	 * recalcule the value for the bottom input
+	 */
 	const handleSwitch = () => {
 		const tempCTop = currencyTop;
 		const tempCBot = currencyBot;
@@ -17,8 +21,7 @@ const Switch = ({
 		setCurrencyBot(tempCTop);
 		const tempVTop = valueTop;
 		const tempVBot = valueBot;
-		setValueTop(tempVBot);
-		setValueBot(tempVTop);
+		setValueBot((tempVTop * currencyTop.value) / currencyBot.value);
 	};
 	return (
 		<>

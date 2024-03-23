@@ -14,6 +14,7 @@ const Currency = ({
 }) => {
 	const ratesArr = [];
 
+	// Create an array of option for the select element with all the currencies names
 	for (const rate in currenciesRates) {
 		ratesArr.push(
 			<option key={rate} value={rate}>
@@ -22,6 +23,13 @@ const Currency = ({
 		);
 	}
 
+	/**
+	 *
+	 * @param {Object} e
+	 *
+	 * Check what currency is changed
+	 * Recalcule the values for the currency that changed
+	 */
 	const handleChangeSelect = (e) => {
 		if (position === "Top") {
 			setCurrencyTop({
@@ -32,7 +40,6 @@ const Currency = ({
 					],
 			});
 			const tempValue = valueBot;
-			console.log(tempValue);
 			setValueTop(
 				(tempValue *
 					currenciesRates[
@@ -49,7 +56,6 @@ const Currency = ({
 					],
 			});
 			const tempValue = valueTop;
-			console.log(tempValue);
 			setValueBot(
 				(tempValue *
 					currenciesRates[

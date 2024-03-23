@@ -9,12 +9,16 @@ import rates from "./rates";
 import "./App.css";
 
 function App() {
+	// OBJECT -> name:STRING, value:NUMBER -> currency for the top input
 	const [currencyTop, setCurrencyTop] = useState({ name: "EUR", value: 1 });
+	// OBJECT -> name:STRING, value:NUMBER -> currency for the bottom input
 	const [currencyBot, setCurrencyBot] = useState({
 		name: "USD",
 		value: 1.139283,
 	});
+	//NUMBER -> value in the top input
 	const [valueTop, setValueTop] = useState(0);
+	//NUMBER -> value in the bottom input
 	const [valueBot, setValueBot] = useState(0);
 
 	// Create an object with all currencies rate
