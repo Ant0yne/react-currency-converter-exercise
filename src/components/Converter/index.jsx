@@ -29,7 +29,12 @@ const Converter = ({
 					setValueBot={setValueBot}
 					currenciesRates={currenciesRates}
 				/>
-				<Buttons />
+				<Buttons
+					currencyTop={currencyTop}
+					setCurrencyTop={setCurrencyTop}
+					currencyBot={currencyBot}
+					setCurrencyBot={setCurrencyBot}
+				/>
 				<Input
 					position="Bot"
 					currencyTop={currencyTop}
