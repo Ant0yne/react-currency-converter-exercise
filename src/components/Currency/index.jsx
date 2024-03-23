@@ -1,27 +1,21 @@
 import "./currency.css";
 
-const Currency = ({ position, currency, setCurrency, currenciesRates }) => {
+const Currency = ({
+	position,
+	currencyTop,
+	setCurrencyTop,
+	currencyBot,
+	setCurrencyBot,
+	currenciesRates,
+}) => {
 	const ratesArr = [];
+
 	for (const rate in currenciesRates) {
-		if (position === "Top" && rate === "EUR") {
-			ratesArr.push(
-				<option key={rate} value="button{position}" selected="selected">
-					{rate}
-				</option>
-			);
-		} else if (position === "Bot" && rate === "USD") {
-			ratesArr.push(
-				<option key={rate} value="button{position}" selected="selected">
-					{rate}
-				</option>
-			);
-		} else {
-			ratesArr.push(
-				<option key={rate} value="button{position}">
-					{rate}
-				</option>
-			);
-		}
+		ratesArr.push(
+			<option key={rate} value={rate}>
+				{rate}
+			</option>
+		);
 	}
 
 	return (
@@ -29,7 +23,27 @@ const Currency = ({ position, currency, setCurrency, currenciesRates }) => {
 			<select
 				name={`button${position}`}
 				id={`button${position}`}
+				value={position === "Top" ? currencyTop.name : currencyBot.name}
 				onChange={(e) => {
+					if (position === "Top") {
+						setCurrencyTop({
+							name: e.nativeEvent.target[e.nativeEvent.target.selectedIndex]
+								.text,
+							value:
+								currenciesRates[
+									e.nativeEvent.target[e.nativeEvent.target.selectedIndex].text
+								],
+						});
+					} else {
+						setCurrencyBot({
+							name: e.nativeEvent.target[e.nativeEvent.target.selectedIndex]
+								.text,
+							value:
+								currenciesRates[
+									e.nativeEvent.target[e.nativeEvent.target.selectedIndex].text
+								],
+						});
+					}
 					console.log(
 						e.nativeEvent.target[e.nativeEvent.target.selectedIndex].text
 					);

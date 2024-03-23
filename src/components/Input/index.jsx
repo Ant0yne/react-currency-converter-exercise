@@ -3,8 +3,10 @@ import "./input.css";
 
 const Input = ({
 	position,
-	currency,
-	setCurrency,
+	currencyTop,
+	setCurrencyTop,
+	currencyBot,
+	setCurrencyBot,
 	valueTop,
 	setValueTop,
 	valueBot,
@@ -20,15 +22,23 @@ const Input = ({
 				onChange={(e) => {
 					if (position === "Top") {
 						setValueTop(e.target.value);
+						setValueBot(
+							(e.target.value * currencyBot.value) / currencyTop.value
+						);
 					} else {
 						setValueBot(e.target.value);
+						setValueTop(
+							(e.target.value * currencyTop.value) / currencyBot.value
+						);
 					}
 				}}
 			/>
 			<Currency
 				position={position}
-				currency={currency}
-				setCurrency={setCurrency}
+				currencyTop={currencyTop}
+				setCurrencyTop={setCurrencyTop}
+				currencyBot={currencyBot}
+				setCurrencyBot={setCurrencyBot}
 				currenciesRates={currenciesRates}
 			/>
 		</>

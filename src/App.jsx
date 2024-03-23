@@ -9,8 +9,11 @@ import rates from "./rates";
 import "./App.css";
 
 function App() {
-	const [currencyTop, setCurrencyTop] = useState("EUR");
-	const [currencyBot, setCurrencyBot] = useState("USD");
+	const [currencyTop, setCurrencyTop] = useState({ name: "EUR", value: 1 });
+	const [currencyBot, setCurrencyBot] = useState({
+		name: "USD",
+		value: 1.139283,
+	});
 	const [valueTop, setValueTop] = useState(0);
 	const [valueBot, setValueBot] = useState(0);
 
