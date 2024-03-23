@@ -7,6 +7,8 @@ const Currency = ({
 	currencyBot,
 	setCurrencyBot,
 	currenciesRates,
+	setValueTop,
+	setValueBot,
 }) => {
 	const ratesArr = [];
 
@@ -44,9 +46,8 @@ const Currency = ({
 								],
 						});
 					}
-					console.log(
-						e.nativeEvent.target[e.nativeEvent.target.selectedIndex].text
-					);
+					setValueTop(0);
+					setValueBot(0);
 				}}>
 				{ratesArr}
 			</select>

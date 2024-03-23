@@ -40,6 +40,8 @@ const Input = ({
 				currencyBot={currencyBot}
 				setCurrencyBot={setCurrencyBot}
 				currenciesRates={currenciesRates}
+				setValueTop={setValueTop}
+				setValueBot={setValueBot}
 			/>
 		</>
 	);
