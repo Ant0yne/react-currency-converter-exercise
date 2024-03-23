@@ -11,6 +11,8 @@ import "./App.css";
 function App() {
 	const [currencyTop, setCurrencyTop] = useState("EUR");
 	const [currencyBot, setCurrencyBot] = useState("USD");
+	const [valueTop, setValueTop] = useState(0);
+	const [valueBot, setValueBot] = useState(0);
 
 	const currenciesRates = rates();
 
@@ -23,6 +25,10 @@ function App() {
 				setCurrencyTop={setCurrencyTop}
 				currencyBot={currencyBot}
 				setCurrencyBot={setCurrencyBot}
+				valueTop={valueTop}
+				setValueTop={setValueTop}
+				valueBot={valueBot}
+				setValueBot={setValueBot}
 			/>
 			<Footer />
 		</>
