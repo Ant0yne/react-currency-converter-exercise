@@ -13,6 +13,16 @@ const Input = ({
 	setValueBot,
 	currenciesRates,
 }) => {
+	const handleChangeInput = (e) => {
+		if (position === "Top") {
+			setValueTop(e.target.value);
+			setValueBot((e.target.value * currencyBot.value) / currencyTop.value);
+		} else {
+			setValueBot(e.target.value);
+			setValueTop((e.target.value * currencyTop.value) / currencyBot.value);
+		}
+	};
+
 	return (
 		<>
 			<div>
@@ -20,19 +30,7 @@ const Input = ({
 					type="number"
 					value={position === "Top" ? valueTop : valueBot}
 					name={`input${position}`}
-					onChange={(e) => {
-						if (position === "Top") {
-							setValueTop(e.target.value);
-							setValueBot(
-								(e.target.value * currencyBot.value) / currencyTop.value
-							);
-						} else {
-							setValueBot(e.target.value);
-							setValueTop(
-								(e.target.value * currencyTop.value) / currencyBot.value
-							);
-						}
-					}}
+					onChange={handleChangeInput}
 				/>
 				<Currency
 					position={position}

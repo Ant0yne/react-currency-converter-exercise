@@ -1,5 +1,5 @@
 import Input from "../Input";
-import Buttons from "../Buttons";
+import Switch from "../Switch";
 
 import "./converter.css";
 
@@ -29,7 +29,7 @@ const Converter = ({
 					setValueBot={setValueBot}
 					currenciesRates={currenciesRates}
 				/>
-				<Buttons
+				<Switch
 					currencyTop={currencyTop}
 					setCurrencyTop={setCurrencyTop}
 					currencyBot={currencyBot}
