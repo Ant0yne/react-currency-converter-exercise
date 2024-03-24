@@ -35,13 +35,20 @@ const Input = ({
 
 	return (
 		<>
-			<div>
+			<div className="input">
 				<input
 					type="number"
 					value={position === "Top" ? valueTop : valueBot}
 					placeholder={isFocus ? "" : "0"}
 					onFocus={() => {
 						setIsFocus(true);
+						if (
+							(valueBot === 0 || valueBot === "") &&
+							(valueBot === 0 || valueBot === "")
+						) {
+							setValueTop("");
+							setValueBot("");
+						}
 					}}
 					onBlur={() => {
 						setIsFocus(false);

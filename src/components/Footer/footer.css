@@ -1,3 +1,13 @@
 footer {
 	text-align: center;
 }
+
+a {
+	color: var(--black);
+	text-decoration: none;
+}
+
+a,
+span {
+	font-weight: bold;
+}

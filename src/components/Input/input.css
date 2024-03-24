@@ -1,0 +1,6 @@
+.input > input {
+	background-color: var(--light-grey);
+	border: none;
+	border-radius: 5%;
+	padding: 5px;
+}
