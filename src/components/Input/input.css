@@ -19,4 +19,9 @@
 	outline: none;
 }
 
-/* font-size: 2rem; */
+@media (min-width: 414px) {
+	.input > input,
+	.input > select {
+		font-size: 2.2rem;
+	}
+}
