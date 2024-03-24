@@ -5,7 +5,7 @@ const Header = () => {
 		<>
 			<header>
 				<h1>💶 Converter 💷</h1>
-				<h2>Not the actual rate</h2>
+				<h2>The rates are outdated</h2>
 			</header>
 		</>
 	);

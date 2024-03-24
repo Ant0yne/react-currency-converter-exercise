@@ -1,0 +1,17 @@
+#switch {
+	/* margin: 0 auto; */
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+#switch > button {
+	font-family: "Roboto", sans-serif;
+	font-size: 1.8rem;
+	border: 1px solid var(--light-grey);
+	border-radius: 5px;
+}
+
+#switch > button:hover {
+	background-color: var(--dark-grey);
+}

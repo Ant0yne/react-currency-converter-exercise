@@ -1,6 +1,22 @@
-.input > input {
+.input {
+	display: flex;
+	justify-content: center;
+	margin: 15px 0;
+	gap: 10px;
+}
+
+.input > input,
+.input > select {
 	background-color: var(--light-grey);
 	border: none;
-	border-radius: 5%;
+	border-radius: 5px;
 	padding: 5px;
 }
+
+.input > input:focus,
+.input > select:focus {
+	border: 1px solid var(--dark-grey);
+	outline: none;
+}
+
+/* font-size: 2rem; */

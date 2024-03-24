@@ -25,8 +25,8 @@ const Switch = ({
 	};
 	return (
 		<>
-			<div>
-				<button onClick={handleSwitch}>Swicth</button>
+			<div id="switch">
+				<button onClick={handleSwitch}>Switch</button>
 			</div>
 		</>
 	);
