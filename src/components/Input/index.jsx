@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Currency from "../Currency";
 import "./input.css";
 
@@ -13,6 +14,8 @@ const Input = ({
 	setValueBot,
 	currenciesRates,
 }) => {
+	const [isFocus, setIsFocus] = useState(false);
+
 	/**
 	 *
 	 * @param {Object} e
@@ -36,6 +39,13 @@ const Input = ({
 				<input
 					type="number"
 					value={position === "Top" ? valueTop : valueBot}
+					placeholder={isFocus ? "" : "0"}
+					onFocus={() => {
+						setIsFocus(true);
+					}}
+					onBlur={() => {
+						setIsFocus(false);
+					}}
 					name={`input${position}`}
 					onChange={handleChangeInput}
 				/>

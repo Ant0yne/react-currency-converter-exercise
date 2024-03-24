@@ -17,9 +17,9 @@ function App() {
 		value: 1.139283,
 	});
 	//NUMBER -> value in the top input
-	const [valueTop, setValueTop] = useState(0);
+	const [valueTop, setValueTop] = useState("");
 	//NUMBER -> value in the bottom input
-	const [valueBot, setValueBot] = useState(0);
+	const [valueBot, setValueBot] = useState("");
 
 	// Create an object with all currencies rate
 	const currenciesRates = rates();
